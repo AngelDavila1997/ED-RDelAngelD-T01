@@ -64,16 +64,16 @@ public class FPMenu {
         return miDato;
     }
     public static double areaCuadrado(){
-        int l = solicitarDatos("lado");
+        int l = solicitarDatos("lado"); //Se utiliza el metodo para ingresar los datos 
         return Math.pow(l,2);
     }
     public static double areaCirculo(){
-        int r = solicitarDatos("radio");
+        int r = solicitarDatos("radio"); //Se utiliza el metodo para ingresar los datos 
         final double pi = 3.1416;
         return pi*Math.pow(r,2);
     }
     public static double areaTriangulo(){
-        int b = solicitarDatos("base");
+        int b = solicitarDatos("base"); //Se utiliza el metodo para ingresar los datos 
         int h = solicitarDatos("altura");
         return (b*h)/2;
     }
