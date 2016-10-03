@@ -19,10 +19,8 @@ public class FPMenu {
         int a;
         double resultado;
         //Metodos
-        System.out.print("La opcion elegida es:" + menu());
         a=menu();
         resultado=calculaAreas(a);
-        solicitarDatos1();
         muestraResultado(resultado);
         
     }
@@ -42,7 +40,7 @@ public class FPMenu {
         return opcion;
     }
     public static double calculaAreas(int a){
-      double area;
+        double area;
         switch(a){
             case 1:
                 area = areaCuadrado();
@@ -62,7 +60,7 @@ public class FPMenu {
     public static int solicitarDatos1(){ //Solicita los valores
         int miDato;
         Scanner entradaEscaner = new Scanner(System.in);
-        System.out.print("\n" + "Introduce el dato");
+        System.out.print("Introduce el dato");
         miDato= entradaEscaner.nextInt();
         return miDato;
     }
@@ -76,21 +74,24 @@ public class FPMenu {
         return base;
         return altura;
     }
-    public static double areaCuadrado(int l){
-        l = solicitarDatos1();
+    public static double areaCuadrado(){
+        int l = solicitarDatos1();
         return Math.pow(l,2);
     }
-    public static double areaCirculo(int r){
-        r = solicitarDatos1();
+    public static double areaCirculo(){
+        int r = solicitarDatos1();
         final double pi = 3.1416;
         return pi*Math.pow(r,2);
     }
-    public static double areaTriangulo(int b, int h){
+    public static double areaTriangulo(){
         
         return (b*h)/2;
     }
     public static void mensajeSalida(){
         System.out.print("Hasta luego");
         System.exit(0);
+    }
+    public static void muestraResultado(double a){
+        System.out.print("El area es " + a);
     }
 }
