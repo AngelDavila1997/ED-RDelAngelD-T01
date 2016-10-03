@@ -54,10 +54,6 @@ public class FPMenu {
         }
         return area;
     }
-    public static int areaCuadrado(int a){
-        return Math.pow(a,2);
-    }
-    public static int areaCirculo(int a){
-        return 
+    public static 
     }
 }
