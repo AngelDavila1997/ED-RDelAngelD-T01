@@ -16,28 +16,33 @@ public class FPMenu {
      */
     public static void main(String[] args) {
         //Declaraciòn de variables
-       
+        int a;
+        double resultado;
         //Metodos
         System.out.print("La opcion elegida es:" + menu());
+        a=menu();
+        resultado=calculaAreas(a);
+        solicitarDatos1();
+        muestraResultado(resultado);
         
     }
     public static int menu(){
         int opcion;
         Scanner teclado = new Scanner(System.in);
        do{
-        System.out.print("Calculo de areas");
-        System.out.print("Menu:");
-        System.out.print("Introduce la opciòn deseada");
-        System.out.print("1. Area de cuadrados");
-        System.out.print("2. Area de circulos");
-        System.out.print("3. Area de triangulos");
+        System.out.print("Calculo de areas" + "\n");
+        System.out.print("Menu:" + "\n");
+        System.out.print("Introduce la opciòn deseada" + "\n");
+        System.out.print("1. Area de cuadrados" + "\n");
+        System.out.print("2. Area de circulos" + "\n");
+        System.out.print("3. Area de triangulos" + "\n");
         System.out.print("0. Salir");
         opcion=teclado.nextInt();
          }while (opcion <0 || opcion >= 4);
         return opcion;
     }
-    public static float calculaAreas(int a){
-      float area;
+    public static double calculaAreas(int a){
+      double area;
         switch(a){
             case 1:
                 area = areaCuadrado();
@@ -49,11 +54,43 @@ public class FPMenu {
                 area = areaTriangulo();
                 break;
             default:
-                area = mensajeSalida();
+                mensajeSalida();
                 break;
         }
         return area;
     }
-    public static 
+    public static int solicitarDatos1(){ //Solicita los valores
+        int miDato;
+        Scanner entradaEscaner = new Scanner(System.in);
+        System.out.print("\n" + "Introduce el dato");
+        miDato= entradaEscaner.nextInt();
+        return miDato;
+    }
+    public static int solicitarDatos2(){
+        int base, altura;
+        Scanner entradaEscaner = new Scanner(System.in);
+        System.out.print("\n" + "Introduce la base");
+        base=entradaEscaner.nextInt();
+        System.out.print("\n" + "Introduce la altura");
+        altura=entradaEscaner.nextInt();
+        return base;
+        return altura;
+    }
+    public static double areaCuadrado(int l){
+        l = solicitarDatos1();
+        return Math.pow(l,2);
+    }
+    public static double areaCirculo(int r){
+        r = solicitarDatos1();
+        final double pi = 3.1416;
+        return pi*Math.pow(r,2);
+    }
+    public static double areaTriangulo(int b, int h){
+        
+        return (b*h)/2;
+    }
+    public static void mensajeSalida(){
+        System.out.print("Hasta luego");
+        System.exit(0);
     }
 }
