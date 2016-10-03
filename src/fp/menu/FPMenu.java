@@ -55,25 +55,25 @@ public class FPMenu {
         }
         return area;
     }
-    public static int solicitarDatos1(){ //Solicita los valores
+    public static int solicitarDatos1(String d){ //Solicita los valores
         int miDato;
         Scanner entradaEscaner = new Scanner(System.in);
-        System.out.print("Introduce el dato");
+        System.out.print("Introduce " + d);
         miDato= entradaEscaner.nextInt();
         return miDato;
     }
     public static double areaCuadrado(){
-        int l = solicitarDatos1();
+        int l = solicitarDatos1("el lado");
         return Math.pow(l,2);
     }
     public static double areaCirculo(){
-        int r = solicitarDatos1();
+        int r = solicitarDatos1("el radio");
         final double pi = 3.1416;
         return pi*Math.pow(r,2);
     }
     public static double areaTriangulo(){
-        int b= solicitarDatos1();
-        int h = solicitarDatos1();
+        int b= solicitarDatos1("la base");
+        int h = solicitarDatos1("la altura");
         return (b*h)/2;
     }
     public static void mensajeSalida(){
