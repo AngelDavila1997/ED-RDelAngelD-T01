@@ -22,7 +22,6 @@ public class FPMenu {
         a=menu();
         resultado=calculaAreas(a);
         muestraResultado(resultado);
-        
     }
     public static int menu(){
         int opcion;
@@ -40,7 +39,7 @@ public class FPMenu {
         return opcion;
     }
     public static double calculaAreas(int a){
-        double area;
+        double area = 0;
         switch(a){
             case 1:
                 area = areaCuadrado();
@@ -53,7 +52,6 @@ public class FPMenu {
                 break;
             default:
                 mensajeSalida();
-                break;
         }
         return area;
     }
