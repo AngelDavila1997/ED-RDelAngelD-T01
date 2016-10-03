@@ -64,16 +64,6 @@ public class FPMenu {
         miDato= entradaEscaner.nextInt();
         return miDato;
     }
-    public static int solicitarDatos2(){
-        int base, altura;
-        Scanner entradaEscaner = new Scanner(System.in);
-        System.out.print("\n" + "Introduce la base");
-        base=entradaEscaner.nextInt();
-        System.out.print("\n" + "Introduce la altura");
-        altura=entradaEscaner.nextInt();
-        return base;
-        return altura;
-    }
     public static double areaCuadrado(){
         int l = solicitarDatos1();
         return Math.pow(l,2);
@@ -84,7 +74,8 @@ public class FPMenu {
         return pi*Math.pow(r,2);
     }
     public static double areaTriangulo(){
-        
+        int b= solicitarDatos1();
+        int h = solicitarDatos1();
         return (b*h)/2;
     }
     public static void mensajeSalida(){
