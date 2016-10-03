@@ -25,7 +25,7 @@ public class FPMenu {
     }
     public static int menu(){
         int opcion;
-        Scanner teclado = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in); //Entrada de teclado para selección de opciones
        do{
         System.out.print("Calculo de areas" + "\n");
         System.out.print("Menu:" + "\n");
@@ -33,14 +33,15 @@ public class FPMenu {
         System.out.print("1. Area de cuadrados" + "\n");
         System.out.print("2. Area de circulos" + "\n");
         System.out.print("3. Area de triangulos" + "\n");
-        System.out.print("0. Salir");
+        System.out.print("0. Salir" + "\n");
         opcion=teclado.nextInt();
-         }while (opcion <0 || opcion >= 4);
+         }while (opcion <0 || opcion >= 4); //Mientras que la opcion ingresada sea menor que 0 O mayor igual a 4
+                                           // seguira mostrando el menu
         return opcion;
     }
-    public static double calculaAreas(int a){
-        double area = 0;
-        switch(a){
+    public static double calculaAreas(int a){ //Seleccion de area a calcular
+        double area = 0; //El 0 es debido al mensaje de salida que no regresa un valor
+        switch(a){ //Seleccion multiple
             case 1:
                 area = areaCuadrado();
                 break;
@@ -58,7 +59,7 @@ public class FPMenu {
     public static int solicitarDatos(String d){ //Solicita los valores
         int miDato;
         Scanner entradaEscaner = new Scanner(System.in);
-        System.out.print("Introduce el dato " + d);
+        System.out.print("Introduce el dato " + d + "\n");
         miDato= entradaEscaner.nextInt();
         return miDato;
     }
