@@ -28,7 +28,7 @@ public class FPMenu {
     }
     public static int menu(){
         int opcion;
-        Scanner teclado = new Scanner(System.in); //Entrada de teclado para selección de opciones
+        Scanner teclado = new Scanner(System.in); //Entrada de teclado para selección de opcioness
        do{
         System.out.print("Calculo de areas" + "\n");
         System.out.print("Menu:" + "\n");
