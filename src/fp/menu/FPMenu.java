@@ -68,7 +68,7 @@ public class FPMenu {
         return miDato;
     }
     public static double areaCuadrado(){
-        int l = solicitarDatos("lado"); //Se utiliza el metodo para ingresar los datoss 
+        int l = solicitarDatos("lado"); //Se utiliza el metodo para ingresar los datos 
         return Math.pow(l,2);
     }
     public static double areaCirculo(){
