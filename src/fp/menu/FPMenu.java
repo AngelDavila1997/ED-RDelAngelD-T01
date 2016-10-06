@@ -39,9 +39,9 @@ public class FPMenu {
                                            // seguira mostrando el menu
         return opcion;
     }
-    public static double calculaAreas(int a){ //Seleccion de area a calcular
+    public static double calculaAreas(int opcionelegida){ //Seleccion de area a calcular
         double area; //El 0 es debido al mensaje de salida que no regresa un valor
-        switch(a){ //Seleccion multiple
+        switch(opcionelegida){ //Seleccion multiple
             case 1:
                 area = areaCuadrado();
                 break;
