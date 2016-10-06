@@ -15,13 +15,15 @@ public class FPMenu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //FORMA 1
         //Declaraciòn de variables
-        //int a;
-        //double resultado;
+        int a;
+        double resultado;
         //Metodos
-        //a=menu();
-        //resultado=calculaAreas(a);
-        //muestraResultado(resultado);
+        a=menu();
+        resultado=calculaAreas(a);
+        muestraResultado(resultado, a);
+        //FORMA 2
         muestraResultado(calculaAreas(menu()));
     }
     public static int menu(){
@@ -85,5 +87,16 @@ public class FPMenu {
     }
     public static void muestraResultado(double a){
         System.out.print("El area es " + a);
+    }
+    public static void muestraResultado(double a, int r){
+        String figura;
+        if (r==1){ figura="cuadrado";
+        }else{
+        if (r==2){ figura="circulo";
+        }else{
+            figura="triangulo";
+        }
+        }
+        System.out.print("El area del " + figura + " es " + a);
     }
 }
