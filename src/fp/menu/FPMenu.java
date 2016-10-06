@@ -16,12 +16,13 @@ public class FPMenu {
      */
     public static void main(String[] args) {
         //Declaraciòn de variables
-        int a;
-        double resultado;
+        //int a;
+        //double resultado;
         //Metodos
-        a=menu();
-        resultado=calculaAreas(a);
-        muestraResultado(resultado);
+        //a=menu();
+        //resultado=calculaAreas(a);
+        //muestraResultado(resultado);
+        muestraResultado(calculaAreas(menu()));
     }
     public static int menu(){
         int opcion;
