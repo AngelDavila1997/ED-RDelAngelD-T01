@@ -14,7 +14,7 @@ public class FPMenu {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) { //Hola
         //FORMA 1
         //Declaraciòn de variables
         //int a;
